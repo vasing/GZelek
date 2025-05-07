@@ -1,0 +1,47 @@
+# Example configuration entry
+output:
+  - platform: ledc
+    pin: GPIO26
+    frequency: 25000 Hz
+    id: gpio26_PWM
+    max_power: 1.0
+
+  - platform: ledc
+    pin: GPIO25
+    frequency: 25000 Hz
+    id: gpio25_PWM
+    max_power: 1.0
+
+  - platform: ledc
+    pin: GPIO33
+    frequency: 25000 Hz
+    id: gpio33_PWM
+    max_power: 1.0
+
+  - platform: ledc
+    pin: GPIO32
+    frequency: 25000 Hz
+    id: gpio32_PWM
+    max_power: 1.0
+
+# Example usage in a light
+fan:
+  - platform: speed
+    output: gpio26_PWM
+    name: "luefter1"
+    id: luefter1 
+
+  - platform: speed
+    output: gpio25_PWM
+    name: "luefter2"
+    id: luefter2
+
+  - platform: speed
+    output: gpio33_PWM
+    name: "luefter3"
+    id: luefter3
+    
+  - platform: speed
+    output: gpio32_PWM
+    name: "luefter4"
+    id: luefter4
